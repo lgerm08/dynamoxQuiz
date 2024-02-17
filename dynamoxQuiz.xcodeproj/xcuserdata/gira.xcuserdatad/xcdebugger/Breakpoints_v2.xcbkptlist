@@ -14,8 +14,8 @@
             filePath = "dynamoxQuiz/Views/QuizView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "checkAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "dynamoxQuiz/Views/QuizView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "checkAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "dynamoxQuiz/Views/QuizView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "checkAnswer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,13 +62,13 @@
             filePath = "dynamoxQuiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "postBattle(answer:completion:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "checkAnswer(answer:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EADADFF8-C4A7-47D1-BB9E-B64CA368D6E8 - ad8c4755e60c2c68"
+                  uuid = "EADADFF8-C4A7-47D1-BB9E-B64CA368D6E8 - ad8c4755e60c2ac3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -78,23 +78,23 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "648">
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "608">
                </Location>
                <Location
-                  uuid = "EADADFF8-C4A7-47D1-BB9E-B64CA368D6E8 - ad8c4755e60c2c68"
+                  uuid = "EADADFF8-C4A7-47D1-BB9E-B64CA368D6E8 - 15c21e749d921cc5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.postBattle(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.checkAnswer(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "dynamoxQuiz"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
                   offsetFromSymbolStart = "292">
                </Location>
             </Locations>
@@ -110,13 +110,13 @@
             filePath = "dynamoxQuiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "postBattle(answer:completion:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "checkAnswer(answer:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F206B433-B679-4CEE-A3E8-5219EF014ACF - ad8c4755e60c2afc"
+                  uuid = "F206B433-B679-4CEE-A3E8-5219EF014ACF - ad8c4755e60c29b6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -126,23 +126,23 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "1212">
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1444">
                </Location>
                <Location
-                  uuid = "F206B433-B679-4CEE-A3E8-5219EF014ACF - ad8c4755e60c2ac3"
+                  uuid = "F206B433-B679-4CEE-A3E8-5219EF014ACF - 15c21e749d921fb0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.postBattle(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.checkAnswer(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "dynamoxQuiz"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
                   offsetFromSymbolStart = "1188">
                </Location>
             </Locations>
@@ -158,13 +158,13 @@
             filePath = "dynamoxQuiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "postBattle(answer:completion:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "checkAnswer(answer:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "43F22867-3F88-488E-82F7-8C6CD395938A - ad8c4755e60c2b01"
+                  uuid = "43F22867-3F88-488E-82F7-8C6CD395938A - ad8c4755e60c29f4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -174,23 +174,23 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "1188">
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1156">
                </Location>
                <Location
-                  uuid = "43F22867-3F88-488E-82F7-8C6CD395938A - ad8c4755e60c2b01"
+                  uuid = "43F22867-3F88-488E-82F7-8C6CD395938A - 15c21e749d921ff2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.postBattle(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.checkAnswer(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "dynamoxQuiz"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
                   offsetFromSymbolStart = "1048">
                </Location>
             </Locations>
@@ -206,13 +206,13 @@
             filePath = "dynamoxQuiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "postBattle(answer:completion:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "checkAnswer(answer:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "764454F1-3E32-4E0C-9CDB-C0E4ED65D3F9 - ad8c4755e60c2afc"
+                  uuid = "764454F1-3E32-4E0C-9CDB-C0E4ED65D3F9 - ad8c4755e60c2970"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -222,23 +222,23 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "1212">
                </Location>
                <Location
-                  uuid = "764454F1-3E32-4E0C-9CDB-C0E4ED65D3F9 - ad8c4755e60c2afc"
+                  uuid = "764454F1-3E32-4E0C-9CDB-C0E4ED65D3F9 - 15c21e749d921f51"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.postBattle(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in dynamoxQuiz.QuizViewModel.checkAnswer(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "dynamoxQuiz"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
                   offsetFromSymbolStart = "1444">
                </Location>
             </Locations>
@@ -254,13 +254,13 @@
             filePath = "dynamoxQuiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "postBattle(answer:completion:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "checkAnswer(answer:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - cddc3733e3ce4ba8"
+                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - cddc3733e3ce4d1c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -270,12 +270,12 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "1612">
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1936">
                </Location>
                <Location
-                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - ad8c4755e60c2d12"
+                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - ad8c4755e60c2ba6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -285,26 +285,90 @@
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
                   offsetFromSymbolStart = "164">
                </Location>
                <Location
-                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - cddc3733e3ce4a56"
+                  uuid = "2FC08F1B-4ACB-4D19-8956-72F225ECD588 - 8a2656e01e67b5a6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "dynamoxQuiz.QuizViewModel.postBattle(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "dynamoxQuiz.QuizViewModel.checkAnswer(answer: Swift.String, completion: (Swift.Result&lt;dynamoxQuiz.Correction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "dynamoxQuiz"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
                   offsetFromSymbolStart = "1936">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB0A03A-7623-4368-9750-BA7BE238E62E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dynamoxQuiz/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "saveNewPlayer(name:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFB0A03A-7623-4368-9750-BA7BE238E62E - 10f89ddf0929fccd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dynamoxQuiz.QuizViewModel.saveNewPlayer(name: Swift.String) -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "BFB0A03A-7623-4368-9750-BA7BE238E62E - 10f89ddf0929fccd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dynamoxQuiz.QuizViewModel.saveNewPlayer(name: Swift.String) -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/dynamoxQuiz/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76F18EBB-3FA4-4BDB-92A8-E61FC51C3735"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dynamoxQuiz/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "loadQuestion(shouldUpdateIndex:rightAnswers:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -13,16 +13,24 @@ protocol HomeProtocol {
 
 class QuizViewModel: ObservableObject {
     
-    var player: String = ""
+    var player: PlayerDb?
     var questions = [Question]()
     var delegate: HomeProtocol?
+    var playersManager = PlayersDbManager()
     
     @Published var quizIsHappening = false
     @Published var currentQuestion = ""
     @Published var currentOptions = [String]()
     @Published var questionIndex = 0
+    @Published var players = [PlayerDb]()
+    @Published var showResult = false
+    
+    init() {
+        self.getPreviousPlayers()
+    }
     
     func getQuestions() async throws {
+        questions.removeAll()
         guard let url = URL(string: "https://quiz-api-bwi5hjqyaq-uc.a.run.app/question") else {
             return
         }
@@ -40,7 +48,7 @@ class QuizViewModel: ObservableObject {
         }
     }
     
-    func postBattle(answer: String, completion: @escaping (Result<Correction, Error>) -> Void) {
+    func checkAnswer(answer: String, completion: @escaping (Result<Correction, Error>) -> Void) {
         // Prepare URL
         let id = questions[questionIndex].id
         let url = URL(string: "https://quiz-api-bwi5hjqyaq-uc.a.run.app/answer?questionId=" + id)
@@ -82,7 +90,22 @@ class QuizViewModel: ObservableObject {
         
     }
     
-    func loadQuestion(shouldUpdateIndex: Bool = true) {
+    func getPreviousPlayers() {
+        players = Array(playersManager.getAllPlayers())
+    }
+    
+    func saveNewPlayer(name: String) {
+        player = PlayerDb(name: name, firstScore: 0.0)
+        playersManager.addPlayer(player: player!)
+        getPreviousPlayers()
+    }
+    
+    func restartQuiz() {
+        questionIndex = 0
+        loadQuestion(shouldUpdateIndex: false, rightAnswers: 0.0)
+    }
+    
+    func loadQuestion(shouldUpdateIndex: Bool = true, rightAnswers: Float = 0.0) {
         
         DispatchQueue.main.async { [self] in
             questionIndex += shouldUpdateIndex ? 1 : 0
@@ -91,9 +114,16 @@ class QuizViewModel: ObservableObject {
                 currentOptions = questions[questionIndex].options
                 objectWillChange.send()
             } else {
-                delegate?.finishQuiz()
+                if let player = player {
+                    playersManager.updatePlayerHistory(name: player.name, score: rightAnswers)
+                    showResult = true
+                }
             }
         }
+    }
+    
+    func finishQuiz() {
+        delegate?.finishQuiz()
     }
     
     

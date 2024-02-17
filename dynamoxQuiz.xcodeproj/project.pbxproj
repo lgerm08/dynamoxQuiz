@@ -22,6 +22,12 @@
 		432A97222B7EEA5400C027DC /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97212B7EEA5400C027DC /* QuizView.swift */; };
 		432A97252B7FA11900C027DC /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97242B7FA11900C027DC /* Answer.swift */; };
 		432A97272B7FA19000C027DC /* Correction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97262B7FA19000C027DC /* Correction.swift */; };
+		432A972B2B80060C00C027DC /* PlayersDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A972A2B80060C00C027DC /* PlayersDb.swift */; };
+		432A972D2B80065D00C027DC /* AnsweredQuizzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A972C2B80065D00C027DC /* AnsweredQuizzes.swift */; };
+		432A972F2B80075700C027DC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 432A972E2B80075700C027DC /* Realm */; };
+		432A97312B80075700C027DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 432A97302B80075700C027DC /* RealmSwift */; };
+		432A97332B800D4600C027DC /* PlayersHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97322B800D4600C027DC /* PlayersHistoryView.swift */; };
+		432A97352B8014B100C027DC /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97342B8014B100C027DC /* PlayersListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,10 @@
 		432A97212B7EEA5400C027DC /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		432A97242B7FA11900C027DC /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		432A97262B7FA19000C027DC /* Correction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correction.swift; sourceTree = "<group>"; };
+		432A972A2B80060C00C027DC /* PlayersDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDb.swift; sourceTree = "<group>"; };
+		432A972C2B80065D00C027DC /* AnsweredQuizzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredQuizzes.swift; sourceTree = "<group>"; };
+		432A97322B800D4600C027DC /* PlayersHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersHistoryView.swift; sourceTree = "<group>"; };
+		432A97342B8014B100C027DC /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432A97312B80075700C027DC /* RealmSwift in Frameworks */,
+				432A972F2B80075700C027DC /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +165,8 @@
 				432A96ED2B7EB1E500C027DC /* HomeView.swift */,
 				432A971F2B7EE52700C027DC /* AsyncButton.swift */,
 				432A97212B7EEA5400C027DC /* QuizView.swift */,
+				432A97322B800D4600C027DC /* PlayersHistoryView.swift */,
+				432A97342B8014B100C027DC /* PlayersListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,11 +174,21 @@
 		432A97232B7FA10400C027DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				432A97292B8005E900C027DC /* RealmModels */,
 				432A971C2B7ECD2A00C027DC /* Question.swift */,
 				432A97242B7FA11900C027DC /* Answer.swift */,
 				432A97262B7FA19000C027DC /* Correction.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		432A97292B8005E900C027DC /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				432A972A2B80060C00C027DC /* PlayersDb.swift */,
+				432A972C2B80065D00C027DC /* AnsweredQuizzes.swift */,
+			);
+			path = RealmModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +207,10 @@
 			dependencies = (
 			);
 			name = dynamoxQuiz;
+			packageProductDependencies = (
+				432A972E2B80075700C027DC /* Realm */,
+				432A97302B80075700C027DC /* RealmSwift */,
+			);
 			productName = dynamoxQuiz;
 			productReference = 432A96E82B7EB1E500C027DC /* dynamoxQuiz.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 432A96DF2B7EB1E500C027DC;
+			packageReferences = (
+				432A97282B80051C00C027DC /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 432A96E92B7EB1E500C027DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,9 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432A972B2B80060C00C027DC /* PlayersDb.swift in Sources */,
+				432A97332B800D4600C027DC /* PlayersHistoryView.swift in Sources */,
 				432A96F52B7EB1E700C027DC /* Persistence.swift in Sources */,
 				432A97202B7EE52700C027DC /* AsyncButton.swift in Sources */,
 				432A96F82B7EB1E700C027DC /* dynamoxQuiz.xcdatamodeld in Sources */,
+				432A972D2B80065D00C027DC /* AnsweredQuizzes.swift in Sources */,
 				432A97252B7FA11900C027DC /* Answer.swift in Sources */,
 				432A96EE2B7EB1E500C027DC /* HomeView.swift in Sources */,
 				432A971D2B7ECD2A00C027DC /* Question.swift in Sources */,
@@ -307,6 +341,7 @@
 				432A97222B7EEA5400C027DC /* QuizView.swift in Sources */,
 				432A971B2B7EBD9300C027DC /* QuizViewModel.swift in Sources */,
 				432A96EC2B7EB1E500C027DC /* dynamoxQuizApp.swift in Sources */,
+				432A97352B8014B100C027DC /* PlayersListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +671,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		432A97282B80051C00C027DC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.47.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		432A972E2B80075700C027DC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 432A97282B80051C00C027DC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		432A97302B80075700C027DC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 432A97282B80051C00C027DC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		432A96F62B7EB1E700C027DC /* dynamoxQuiz.xcdatamodeld */ = {

@@ -6,35 +6,57 @@
 //
 
 import SwiftUI
-import CoreData
+import RealmSwift
+
+protocol PlayerHistoryProtocol {
+    func updatePlayersList(palyer: PlayerDb)
+}
 
 struct HomeView: View, HomeProtocol {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Player.creationDate, ascending: true)],
-        animation: .default)
-    private var previousPlayers: FetchedResults<Player>
     @State private var viewModel = QuizViewModel()
     @State private var name = ""
     @State private var quizStarted = false
+    @State private var player: PlayerDb?
+    
     
     var body: some View {
         if !quizStarted {
-            VStack(alignment: .center, spacing: 7) {
-                Text("Quem está jogando?")
-                TextField("Nome ou apelido", text: $name)
-                    .padding(5)
-                    .disableAutocorrection(true)
-                    .border(.secondary)
-                AsyncButton(action: {
-                    await startQuiz()
-                }, label: {
-                    Text("Iniciar Quiz")
-                })
-                .disabled(name.isEmpty)
-        }
-            .padding(15)
+            Form {
+                Section {
+                    VStack(alignment: .leading, spacing: 9) {
+                        Text("Novo(a) Jogador(a):")
+                        TextField("Nome ou Apelido", text: $name)
+                            .padding(5)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .border(.separator)
+                    }
+                }
+                Section {
+                    if !viewModel.players.isEmpty {
+                        HStack(alignment: .center, spacing: 9) {
+                            Picker("Já sou cadastrado:", selection: $player) {
+                                ForEach(viewModel.players) { player in
+                                    Text(player.name)
+                                }
+                            }
+                        }
+                    }
+                }
+                Section {
+                    AsyncButton(action: {
+                        self.registerPlayer()
+                        await startQuiz()
+                    }, label: {
+                        Text("Iniciar Quiz")
+                    })
+                    .disabled(name.isEmpty && player == nil)
+                }
+                Section {
+                    PlayersHistoryView(viewModel: viewModel)
+                }
+                
+            }
         } else {
             VStack(alignment: .center, spacing: 7) {
                 QuizView(viewModel: viewModel)
@@ -48,12 +70,21 @@ struct HomeView: View, HomeProtocol {
         }
         
     }
-   
+    
+    private func registerPlayer() {
+        if let oldPlayer = player {
+            viewModel.player = oldPlayer
+        } else {
+            viewModel.saveNewPlayer(name: name)
+        }
+    }
+    
     private func startQuiz() async {
         do {
             try await viewModel.getQuestions()
             self.viewModel.delegate = self
             self.quizStarted = true
+            
         } catch {
             print(error)
         }
@@ -61,50 +92,11 @@ struct HomeView: View, HomeProtocol {
     
     func finishQuiz() {
         quizStarted = false
+        name = ""
+        player = nil
         viewModel = QuizViewModel()
     }
     
-
-//    var body: some View {
-//        NavigationView {
-//            List {
-//                ForEach(items) { item in
-//                    NavigationLink {
-//                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-//                    } label: {
-//                        Text(item.timestamp!, formatter: itemFormatter)
-// 
-
-    private func addPlayer() {
-        withAnimation {
-            let newPlayer = Player(context: viewContext)
-            newPlayer.name = viewModel.player
-            newPlayer.creationDate = Date()
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { previousPlayers[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
 }
 
 private let itemFormatter: DateFormatter = {
