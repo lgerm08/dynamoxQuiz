@@ -28,6 +28,7 @@
 		432A97312B80075700C027DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 432A97302B80075700C027DC /* RealmSwift */; };
 		432A97332B800D4600C027DC /* PlayersHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97322B800D4600C027DC /* PlayersHistoryView.swift */; };
 		432A97352B8014B100C027DC /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97342B8014B100C027DC /* PlayersListView.swift */; };
+		432A97372B8187F200C027DC /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A97362B8187F200C027DC /* PlayerDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		432A972C2B80065D00C027DC /* AnsweredQuizzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredQuizzes.swift; sourceTree = "<group>"; };
 		432A97322B800D4600C027DC /* PlayersHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersHistoryView.swift; sourceTree = "<group>"; };
 		432A97342B8014B100C027DC /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		432A97362B8187F200C027DC /* PlayerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				432A97212B7EEA5400C027DC /* QuizView.swift */,
 				432A97322B800D4600C027DC /* PlayersHistoryView.swift */,
 				432A97342B8014B100C027DC /* PlayersListView.swift */,
+				432A97362B8187F200C027DC /* PlayerDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432A97372B8187F200C027DC /* PlayerDetailsView.swift in Sources */,
 				432A972B2B80060C00C027DC /* PlayersDb.swift in Sources */,
 				432A97332B800D4600C027DC /* PlayersHistoryView.swift in Sources */,
 				432A96F52B7EB1E700C027DC /* Persistence.swift in Sources */,

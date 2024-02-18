@@ -13,8 +13,11 @@ struct QuizView: View {
     private var maxIndex: Int
     
     @ObservedObject private var viewModel: QuizViewModel
+    @State private var refresh: Bool = false
     @State private var selectedAnswer: String?
     @State var rightAnswers: Int = 0
+    
+    private var isRightAnswer: Bool?
     
     
     init(viewModel: QuizViewModel) {
@@ -40,7 +43,7 @@ struct QuizView: View {
                         } label: {
                             Text(option)
                                 .bold(selectedAnswer == option)
-                                .foregroundStyle(selectedAnswer == option ? .blue : .black)
+                                .foregroundStyle(selectedAnswer == nil ? .black : viewModel.getTextColor(option: option, selectedAnswer: selectedAnswer ?? ""))
                         }
                     }
                 }
@@ -62,7 +65,7 @@ struct QuizView: View {
                 }
                 Section {
                     Text("Pontuação: \(rightAnswers)/10")
-                    Text("Vocé jogou \(viewModel.player?.quizzesTaken ?? 0) vezes, e tem uma média de acertos de \(viewModel.player?.avarageScore ?? 0).")
+                    Text("Vocé jogou \(viewModel.player?.quizzesTaken ?? 0) vezes, e tem uma média de acertos de \(viewModel.player?.avarageScore ?? 0, specifier: "%.2f").")
                 }
                 Section {
                     AsyncButton(action: {
@@ -76,7 +79,7 @@ struct QuizView: View {
                     Button(action: {
                         viewModel.finishQuiz()
                     }, label: {
-                        Text("Voltar a tela princiapl")
+                        Text("Voltar a tela principal")
                     })
                 }
             }
@@ -90,16 +93,23 @@ struct QuizView: View {
                     case .success(let correction):
                         if correction.result {
                             self.rightAnswers += 1
-                            self.viewModel.loadQuestion(rightAnswers: Float(self.rightAnswers))
-                        } else {
-                            self.viewModel.loadQuestion(rightAnswers: Float(self.rightAnswers))
                         }
+                        self.giveFeedback()
                     case .failure(let failure):
                         print(failure)
                     }
                 }
         }
-        selectedAnswer = nil
+    }
+    
+    private func giveFeedback() {
+        DispatchQueue.main.async {
+            self.viewModel.objectWillChange.send()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.selectedAnswer = nil
+            self.viewModel.loadQuestion(rightAnswers: Float(self.rightAnswers))
+        }
     }
     
     private func restartQuiz() async {

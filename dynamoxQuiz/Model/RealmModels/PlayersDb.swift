@@ -8,13 +8,15 @@ import Foundation
 import RealmSwift
 
 final class PlayerDb: Object, ObjectKeyIdentifiable {
+    @Persisted var id: String
     @Persisted var name: String
     @Persisted var quizzesTaken: Int = 0
     @Persisted var avarageScore: Float = 0.0
     @Persisted var lastQuizTaken: Date
+    @Persisted var lastScore: Float = 0.0
     
     override class func primaryKey() -> String {
-        return "name"
+        return "id"
     }
     
     convenience init (
@@ -22,6 +24,7 @@ final class PlayerDb: Object, ObjectKeyIdentifiable {
         firstScore: Float
     ) {
         self.init()
+        self.id = UUID().uuidString
         self.name = name
         self.avarageScore = firstScore
         self.lastQuizTaken = Date()
@@ -44,13 +47,14 @@ class PlayersDbManager {
         return players
     }
     
-    public func updatePlayerHistory(name: String, score: Float) {
+    public func updatePlayerHistory(id: String, score: Float) {
         try! realm.write {
-            let players = realm.objects(PlayerDb.self).filter(NSPredicate(format: "name == %@", name ))
+            let players = realm.objects(PlayerDb.self).filter(NSPredicate(format: "id == %@", id ))
             if let player = players.first {
                 player.lastQuizTaken = Date()
                 player.avarageScore = (player.avarageScore*Float(player.quizzesTaken) + score)/(Float(player.quizzesTaken) + 1.0)
                 player.quizzesTaken += 1
+                player.lastScore = score
             }
         }
     }

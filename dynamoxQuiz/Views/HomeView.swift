@@ -20,54 +20,66 @@ struct HomeView: View, HomeProtocol {
     
     
     var body: some View {
-        if !quizStarted {
-            Form {
-                Section {
-                    VStack(alignment: .leading, spacing: 9) {
-                        Text("Novo(a) Jogador(a):")
-                        TextField("Nome ou Apelido", text: $name)
-                            .padding(5)
-                            .disableAutocorrection(true)
-                            .autocapitalization(.none)
-                            .border(.separator)
+        NavigationView {
+            if !quizStarted {
+                Form {
+                    Section {
+                        VStack(alignment: .leading, spacing: 9) {
+                            Text("Novo(a) Jogador(a):")
+                            TextField("Nome ou Apelido", text: $name, onEditingChanged: { editingChanged in
+                                if editingChanged {
+                                    player = nil
+                                }
+                            })
+                                .padding(5)
+                                .disableAutocorrection(true)
+                                .autocapitalization(.none)
+                                .border(.separator)
+                        }
                     }
-                }
-                Section {
-                    if !viewModel.players.isEmpty {
-                        HStack(alignment: .center, spacing: 9) {
-                            Picker("Já sou cadastrado:", selection: $player) {
-                                ForEach(viewModel.players) { player in
-                                    Text(player.name)
+                    Section {
+                        if !viewModel.players.isEmpty {
+                            HStack(alignment: .center, spacing: 9) {
+                                Picker("Já sou cadastrado:", selection: $player) {
+                                    Text("Selecionar").tag(nil as PlayerDb?)
+                                    ForEach(viewModel.players) { player in
+                                        Text(player.name).tag(player as PlayerDb?)
+                                    }
+                                }
+                                .onChange(of: player) {
+                                    if player != nil {
+                                        name = ""
+                                    }
                                 }
                             }
                         }
                     }
+                    Section {
+                        AsyncButton(action: {
+                            self.registerPlayer()
+                            await startQuiz()
+                        }, label: {
+                            Text("Iniciar Quiz")
+                        })
+                        .disabled(name.isEmpty && player == nil)
+                    }
+                    Section {
+                            PlayersHistoryView(viewModel: viewModel)
+                    }
                 }
-                Section {
-                    AsyncButton(action: {
-                        self.registerPlayer()
-                        await startQuiz()
-                    }, label: {
-                        Text("Iniciar Quiz")
-                    })
-                    .disabled(name.isEmpty && player == nil)
-                }
-                Section {
-                    PlayersHistoryView(viewModel: viewModel)
-                }
-                
-            }
-        } else {
-            VStack(alignment: .center, spacing: 7) {
-                QuizView(viewModel: viewModel)
-                Button {
-                    quizStarted = false
-                    viewModel = QuizViewModel()
-                } label: {
-                    Text("Desistir")
+            } else {
+                VStack(alignment: .center, spacing: 7) {
+                    QuizView(viewModel: viewModel)
+                    Button {
+                        quizStarted = false
+                        viewModel = QuizViewModel()
+                    } label: {
+                        Text("Desistir")
+                    }
                 }
             }
         }
+        
         
     }
     
@@ -107,5 +119,5 @@ private let itemFormatter: DateFormatter = {
 }()
 
 #Preview {
-    HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    HomeView()
 }

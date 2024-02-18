@@ -17,6 +17,7 @@ class QuizViewModel: ObservableObject {
     var questions = [Question]()
     var delegate: HomeProtocol?
     var playersManager = PlayersDbManager()
+    var isAnswerRight: Bool?
     
     @Published var quizIsHappening = false
     @Published var currentQuestion = ""
@@ -80,6 +81,7 @@ class QuizViewModel: ObservableObject {
                     let cleanJSONData = String(decoding: correction, as: UTF8.self)
                     print(cleanJSONData)
                     let result = try JSONDecoder().decode(Correction.self, from: correction)
+                    self.isAnswerRight = result.result
                     completion(.success(result))
                 } catch {
                     print(error)
@@ -106,7 +108,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func loadQuestion(shouldUpdateIndex: Bool = true, rightAnswers: Float = 0.0) {
-        
+        isAnswerRight = nil
         DispatchQueue.main.async { [self] in
             questionIndex += shouldUpdateIndex ? 1 : 0
             if questions.indices.contains(questionIndex) {
@@ -115,15 +117,32 @@ class QuizViewModel: ObservableObject {
                 objectWillChange.send()
             } else {
                 if let player = player {
-                    playersManager.updatePlayerHistory(name: player.name, score: rightAnswers)
+                    playersManager.updatePlayerHistory(id: player.id, score: rightAnswers)
                     showResult = true
                 }
             }
         }
     }
     
+    func getTextColor(option: String, selectedAnswer:String ) -> Color {
+        if option == selectedAnswer && isAnswerRight == true {
+            return .green
+        } else if option == selectedAnswer && isAnswerRight == false {
+            return .red
+        } else if option == selectedAnswer && isAnswerRight == nil {
+            return .blue
+        }
+        return .black
+    }
+    
     func finishQuiz() {
         delegate?.finishQuiz()
+    }
+    
+    func deletePlayerHistory(playerIndex: IndexSet) {
+        if let index = playerIndex.first {
+            print(players[index].name)
+        }
     }
     
     
