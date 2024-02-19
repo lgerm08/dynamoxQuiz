@@ -3,4 +3,246 @@
    uuid = "6EBECBFE-857F-462C-8C9A-5B6D1769AD07"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54D621BE-D8D8-4043-B5FE-7E5E2236F644"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "reloadList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54D621BE-D8D8-4043-B5FE-7E5E2236F644 - 8e440b8f4188345f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.HomeView.reloadList() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "54D621BE-D8D8-4043-B5FE-7E5E2236F644 - 8e440b8f4188345f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.HomeView.reloadList() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B78724F-2407-47AD-8BF5-5818159583C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/ViewModel/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "QuizViewModel"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "8B78724F-2407-47AD-8BF5-5818159583C9 - f15ab8dcf8ef2dfe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.deleteHistory() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "8B78724F-2407-47AD-8BF5-5818159583C9 - f15ab8dcf8ef2dfe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.deleteHistory() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "447125EC-F274-41B9-B9D6-11448DA521BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/ViewModel/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "QuizViewModel"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "447125EC-F274-41B9-B9D6-11448DA521BC - f15ab8dcf8ef2ddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.deleteHistory() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "447125EC-F274-41B9-B9D6-11448DA521BC - f15ab8dcf8ef2ddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.deleteHistory() -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36B7A46F-9B6F-44C9-B324-660E862C8472"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "registerPlayer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84A82FB0-F8B5-4E44-AD03-BC94574DE2DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "registerPlayer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59CCEF25-1213-4499-9F56-2023A1742601"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/ViewModel/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "saveNewPlayer(name:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59CCEF25-1213-4499-9F56-2023A1742601 - d5ba5f3f1dbf0ecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.saveNewPlayer(name: Swift.String) -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "59CCEF25-1213-4499-9F56-2023A1742601 - d5ba5f3f1dbf0ecc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DynamoxQuiz.QuizViewModel.saveNewPlayer(name: Swift.String) -&gt; ()"
+                  moduleName = "dynamoxQuiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gira/Documents/TCC/Dynamox/dynamoxQuiz/DynamoxQuiz/ViewModel/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25A891BA-2789-4445-B377-8592C3F9C861"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamoxQuiz/ViewModel/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "reloadPlayersList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

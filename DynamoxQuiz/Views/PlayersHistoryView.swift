@@ -20,10 +20,8 @@ struct PlayersHistoryView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 7) {
-            HStack(alignment: .center) {
                 Text("Histórico")
                     .frame(maxWidth: .infinity)
-            }
         }
         List {
             ForEach(viewModel.players){ player in
@@ -35,6 +33,7 @@ struct PlayersHistoryView: View {
                             .frame(maxWidth: .infinity)
                     }
                 }
+                .listRowSeparator(.hidden)
             }
         }
         

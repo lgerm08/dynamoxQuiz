@@ -11,6 +11,13 @@ import SwiftUI
 
 final class DynamoxQuizTests: XCTestCase {
     
+    func testIfPlayerReceivesValueAfterUserRegisters() {
+          let viewModel = QuizViewModel()
+          viewModel.saveNewPlayer(name: "Teste")
+          
+          XCTAssertNotNil(viewModel.player)
+      }
+    
     func testIfTextIsGreenIfRightAnswerIsSelected()  {
         var viewModel = QuizViewModel()
         viewModel.isAnswerRight = true
